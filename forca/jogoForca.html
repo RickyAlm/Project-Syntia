@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/introForca.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jogo da Forca 🌻</h1>
+            <p>Meu amor, tente adivinhar a palavra secreta. Você pode digitar uma letra, arriscar a palavra inteira ou pedir uma dica!</p>
+        </header>
+        <div id="hangman">
+            <pre id="hangmanDrawing"></pre>
+            <p id="wordDisplay"></p>
+            <p id="attempts"></p>
+            <input type="text" id="letterInput" maxlength="1" placeholder="Digite uma letra">
+            <button id="guessButton">Tentar Letra</button>
+            <br><br>
+            <input type="text" id="wordInput" placeholder="Digite a palavra inteira">
+            <button id="guessWordButton">Tentar Palavra</button>
+            <br><br>
+            <button id="hintButton">DICA</button>
+            <div id="hintBox" class="hidden">
+                <p id="hintText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../assets/js/jogoForca.js"></script>
+</body>
+</html>

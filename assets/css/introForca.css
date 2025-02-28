@@ -1,0 +1,129 @@
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* max-width: 500px; */
+    min-width: 500px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #e67e22;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #5a3e36;
+}
+
+button {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #d35400;
+}
+
+#hangman {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#hangmanDrawing {
+    font-family: monospace;
+    font-size: 1.2rem;
+    white-space: pre;
+    margin-bottom: 1rem;
+}
+
+#wordDisplay {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#attempts {
+    font-size: 1rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+
+#letterInput, #wordInput {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #e67e22;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    width: 200px;
+}
+
+#guessButton, #guessWordButton {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0.5rem;
+}
+
+#guessButton:hover, #guessWordButton:hover {
+    background: #d35400;
+}
+
+/* Adicione isso ao seu arquivo CSS existente */
+#hintButton {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0.5rem;
+}
+
+#hintButton:hover {
+    background: #d35400;
+}
+
+#hintBox {
+    background: white;
+    padding: 1rem;
+    border: 2px solid #e67e22;
+    border-radius: 10px;
+    margin-top: 1rem;
+    display: none; /* Inicialmente oculto */
+}
+
+#hintBox.visible {
+    display: block; /* Exibe a caixa de dica */
+}
+
+.hidden {
+    display: none;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
