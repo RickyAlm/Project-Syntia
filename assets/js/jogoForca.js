@@ -34,11 +34,11 @@ function selectNewWord() {
             confirmButtonColor: '#e67e22'
         }).then((result) => {
             document.addEventListener("click", () => {
-                window.location.href = '../../forca/parabensForca.html';
+                window.location.href = '../forca/parabensForca.html';
             })
 
             if(result.isConfirmed) {
-                window.location.href = '../../forca/parabensForca.html';
+                window.location.href = '../forca/parabensForca.html';
             }
         })
         return;
