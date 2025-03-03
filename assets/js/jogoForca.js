@@ -1,8 +1,11 @@
 const words = [
     { word: "ALFREDA", hint: "Nome de um animalzinho de estimação." },
-    // { word: "NENEMZINHA", hint: "Apelido carinhoso." },
-    // { word: "EVERYTHING-GOOD", hint: "Uma música." },
-    // { word: "QUANTO", hint: "Palavra indecifrável da Syntia." },
+    { word: "NENEMZINHA", hint: "Apelido carinhoso." },
+    { word: "EVERYTHING-GOOD", hint: "Uma música." },
+    { word: "QUANTO", hint: "Palavra indecifrável da Syntia." },
+    { word: "THOUSAND-FOOT-KRUTCH", hint: "Uma banda que você gosta muito." },
+    { word: "INCRIVEL", hint: "Algo que você é." },
+    { word: "VIEIRA", hint: "Meu nome do meio (porquê um dia você esqueceu kkk)." },
 ];
 
 let remainingWords = [...words];
@@ -68,6 +71,9 @@ function updateDisplay() {
     attemptsDisplay.textContent = `Tentativas restantes: ${attempts}`;
 
     if (!wordDisplay.textContent.includes('_')) {
+        letterInput.value = "";
+        wordInput.value = "";
+
         Swal.fire({
             title: 'Parabêns, meu amor ❤️!',
             html: `Você acertou a palavra <strong>"${selectedWord}"!</strong>.`,
@@ -192,6 +198,9 @@ guessWordButton.addEventListener('click', function() {
     const guessedWord = wordInput.value.toUpperCase();
 
     if (guessedWord === selectedWord) {
+        letterInput.value = "";
+        wordInput.value = "";
+
         Swal.fire({
             title: 'Parabêns, meu amor ❤️!',
             html: `Você acertou a palavra <strong>"${selectedWord}"!</strong>.`,

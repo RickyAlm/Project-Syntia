@@ -3,7 +3,6 @@
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    /* max-width: 500px; */
     min-width: 500px;
     position: relative;
 }
@@ -84,7 +83,6 @@ button:hover {
     background: #d35400;
 }
 
-/* Adicione isso ao seu arquivo CSS existente */
 #hintButton {
     background: #e67e22;
     color: white;
@@ -107,11 +105,11 @@ button:hover {
     border: 2px solid #e67e22;
     border-radius: 10px;
     margin-top: 1rem;
-    display: none; /* Inicialmente oculto */
+    display: none;
 }
 
 #hintBox.visible {
-    display: block; /* Exibe a caixa de dica */
+    display: block;
 }
 
 .hidden {

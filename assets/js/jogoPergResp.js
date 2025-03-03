@@ -4,31 +4,36 @@ const questions = [
         options: ["12/12/2024", "14/12/2024", "13/12/2024", "11/12/2024"],
         correctAnswer: "13/12/2024"
     },
-    // {
-    //     question: "Qual é minha cor favorita?",
-    //     options: ["Azul", "Preto", "Branco", "Vermelho"],
-    //     correctAnswer: "Preto"
-    // },
-    // {
-    //     question: "Qual é meu endereço?",
-    //     options: ["Rua Rogério de Carvalho Santos, 670", "Rua Ronaldo de Carvalho Santos, 670", "Rua Roger de Andrade Santos, 660", "Rua Rogério de Andrade Santos, 670"],
-    //     correctAnswer: "Rua Rogério de Andrade Santos, 670"
-    // },
-    // {
-    //     question: "Qual é minha comida favorita?",
-    //     options: ["Pizza", "Lasanha", "Strogonoff", "Baião de Dois"],
-    //     correctAnswer: "Pizza"
-    // },
-    // {
-    //     question: "Qual é o nome dos meus pais?",
-    //     options: ["Consolação e Eliomar", "Consola e Elismar", "Consolação e Elismar", "Consola e Edimar"],
-    //     correctAnswer: "Consola e Elismar"
-    // },
-    // {
-    //     question: "Em qual cidade eu nasci?",
-    //     options: ["Arujá", "São Paulo", "Mogi das Cruzes", "Santa Isabel"],
-    //     correctAnswer: "Santa Isabel"
-    // },
+    {
+        question: "Qual é minha cor favorita?",
+        options: ["Azul", "Preto", "Branco", "Vermelho"],
+        correctAnswer: "Preto"
+    },
+    {
+        question: "Qual é meu endereço?",
+        options: ["Rua Rogério de Carvalho Santos, 670", "Rua Ronaldo de Carvalho Santos, 670", "Rua Roger de Andrade Santos, 660", "Rua Rogério de Andrade Santos, 670"],
+        correctAnswer: "Rua Rogério de Andrade Santos, 670"
+    },
+    {
+        question: "Qual é minha comida favorita?",
+        options: ["Pizza", "Lasanha", "Strogonoff", "Baião de Dois"],
+        correctAnswer: "Pizza"
+    },
+    {
+        question: "Qual é o nome dos meus pais?",
+        options: ["Consolação e Eliomar", "Consola e Elismar", "Consolação e Elismar", "Consola e Edimar"],
+        correctAnswer: "Consola e Elismar"
+    },
+    {
+        question: "Em qual cidade eu nasci?",
+        options: ["Arujá", "São Paulo", "Mogi das Cruzes", "Santa Isabel"],
+        correctAnswer: "Santa Isabel"
+    },
+    {
+        question: "Em que dia se declaramos um para o outro?",
+        options: ["23/12/2024", "22/12/2024", "24/12/2024", "21/12/2024"],
+        correctAnswer: "23/12/2024"
+    },
 ];
 
 let currentQuestionIndex = 0;
@@ -48,8 +53,10 @@ function loadQuestion() {
 
 function checkAnswer(selectedOption) {
     const currentQuestion = questions[currentQuestionIndex];
+
     if (selectedOption === currentQuestion.correctAnswer) {
         currentQuestionIndex++;
+
         if (currentQuestionIndex < questions.length) {
             Swal.fire({
                 title: 'Parabêns, meu amor ❤️!',
@@ -62,13 +69,17 @@ function checkAnswer(selectedOption) {
         } else {
             Swal.fire({
                 title: 'Parabêns, nenémzinha ❤️!',
-                html: 'Você acertou todas as perguntas!.<br>Clique no botão abaixo para ir para o próximo jogo.',
+                html: 'Você acertou todas as perguntas!<br>Clique no botão abaixo para ir para o próximo e último jogo.',
                 icon: 'success',
                 confirmButtonText: 'Proximo Jogo',
                 confirmButtonColor: '#e67e22'
             }).then((result) => {
+                document.addEventListener("click", () => {
+                    window.location.href = '../memoria/jogoMemoria.html';
+                })
+
                 if(result.isConfirmed) {
-                    window.location.href = '.html';
+                    window.location.href = '../memoria/jogoMemoria.html';
                 }
             })
         }

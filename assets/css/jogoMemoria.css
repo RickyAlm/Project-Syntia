@@ -1,0 +1,56 @@
+.container {
+  min-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container.veryHard {
+  min-width: 950px;
+}
+
+#memory-board {
+  display: grid;
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#memory-board.easy {
+  grid-template-columns: repeat(4, 100px);
+}
+
+#memory-board.medium {
+  grid-template-columns: repeat(6, 100px);
+}
+
+#memory-board.hard {
+  grid-template-columns: repeat(6, 100px);
+}
+
+#memory-board.veryHard {
+  grid-template-columns: repeat(8, 100px);
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #e67e22;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card.flipped {
+  background-color: #d35400;
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  background-color: #2ecc71;
+  cursor: default;
+}
