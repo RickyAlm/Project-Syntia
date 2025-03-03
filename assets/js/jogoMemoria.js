@@ -165,4 +165,4 @@ const addAlert = {
     }
 };
 
-startGame('veryHard');
+startGame('easy');
