@@ -1,6 +1,6 @@
 const words = [
     { word: "ALFREDA", hint: "Nome de um animalzinho de estimação." },
-    { word: "NENEMZINHA", hint: "Apelido carinhoso." },
+    { word: "NENENZINHA", hint: "Apelido carinhoso." },
     { word: "EVERYTHING-GOOD", hint: "Uma música." },
     { word: "QUANTO", hint: "Palavra indecifrável da Syntia." },
     { word: "THOUSAND-FOOT-KRUTCH", hint: "Uma banda que você gosta muito." },

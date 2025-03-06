@@ -68,7 +68,7 @@ function checkAnswer(selectedOption) {
             loadQuestion();
         } else {
             Swal.fire({
-                title: 'Parabêns, nenémzinha ❤️!',
+                title: 'Parabêns, nenenzinha ❤️!',
                 html: 'Você acertou todas as perguntas!<br>Clique no botão abaixo para ir para o próximo e último jogo.',
                 icon: 'success',
                 confirmButtonText: 'Proximo Jogo',
