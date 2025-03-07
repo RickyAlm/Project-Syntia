@@ -22,8 +22,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    position: relative;
-}
+    position: relative;}
 
 header h1 {
     font-family: 'Pacifico', cursive;
@@ -68,4 +67,16 @@ button {
 
 button:hover {
     background: #d35400;
+}
+
+@media (min-width: 421px) and (max-width: 516px) {
+    .container {
+        min-width: 200px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 420px) {
+    .container {
+        min-width: 20px;
+    }
 }

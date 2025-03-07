@@ -125,3 +125,15 @@ button:hover {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
+
+@media (min-width: 421px) and (max-width: 516px) {
+    .container {
+        min-width: 200px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 420px) {
+    .container {
+        min-width: 20px;
+    }
+}
